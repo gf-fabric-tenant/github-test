@@ -1,0 +1,96 @@
+table automobile
+	lineageTag: 9292662c-d4dd-4d6e-9f17-8220a59c8673
+
+	column name
+		dataType: string
+		lineageTag: 7355a624-43c7-4ce2-8ee6-1f54d5b2f47c
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column mpg
+		dataType: double
+		lineageTag: 980507c8-31fe-4bd5-9c75-c1b0e4490cdc
+		summarizeBy: average
+		sourceColumn: mpg
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cylinders
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b4720a6-194b-40e9-a4b9-4f9136d11af4
+		summarizeBy: sum
+		sourceColumn: cylinders
+
+		annotation SummarizationSetBy = Automatic
+
+	column displacement
+		dataType: double
+		lineageTag: 649f8e7e-9b58-4caa-93cc-620ade530fd3
+		summarizeBy: sum
+		sourceColumn: displacement
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column horsepower
+		dataType: int64
+		formatString: 0
+		lineageTag: 42833f07-ec33-4485-a228-2184be368522
+		summarizeBy: sum
+		sourceColumn: horsepower
+
+		annotation SummarizationSetBy = Automatic
+
+	column weight
+		dataType: int64
+		formatString: 0
+		lineageTag: 51ec9b97-453c-4bc0-8a74-36fba36dc71c
+		summarizeBy: sum
+		sourceColumn: weight
+
+		annotation SummarizationSetBy = Automatic
+
+	column acceleration
+		dataType: double
+		lineageTag: c441213b-8751-41d9-8f1b-3ff0b647c42c
+		summarizeBy: sum
+		sourceColumn: acceleration
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column model_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 82857d79-ea3c-444d-bdba-67aba029237e
+		summarizeBy: none
+		sourceColumn: model_year
+
+		annotation SummarizationSetBy = User
+
+	column origin
+		dataType: string
+		lineageTag: e3f50a94-409b-4555-952e-e08598cb44fe
+		summarizeBy: none
+		sourceColumn: origin
+
+		annotation SummarizationSetBy = Automatic
+
+	partition automobile = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("p24mx7sx5ooebinxdfx5npabre-v74v5a32utvullhchzhk6e2xdq.datawarehouse.fabric.microsoft.com", "LH_demodata"),
+				    dbo_automobile = Source{[Schema="dbo",Item="automobile"]}[Data]
+				in
+				    dbo_automobile
+
+	annotation PBI_ResultType = Table
+

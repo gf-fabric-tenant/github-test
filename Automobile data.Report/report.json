@@ -1,0 +1,69 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.61\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "19cca4ef93f8e3a47f52",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2bae6ea0b586426fab99\",\"layouts\":[{\"id\":0,\"position\":{\"x\":656,\"y\":0,\"z\":2000,\"width\":624,\"height\":336,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"automobile.model_year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Avg(automobile.weight)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"automobile\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"model_year\"},\"Name\":\"automobile.model_year\",\"NativeReferenceName\":\"model_year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"weight\"}},\"Function\":1},\"Name\":\"Avg(automobile.weight)\",\"NativeReferenceName\":\"Average of weight\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"model_year\"}}}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 336.00,
+          "width": 624.00,
+          "x": 656.00,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"3d9d06bd38e8efa7bd45\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":640,\"height\":336,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"automobile.model_year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Avg(automobile.displacement)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"automobile\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"model_year\"},\"Name\":\"automobile.model_year\",\"NativeReferenceName\":\"model_year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"displacement\"}},\"Function\":1},\"Name\":\"Avg(automobile.displacement)\",\"NativeReferenceName\":\"Average of displacement\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"model_year\"}}}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 336.00,
+          "width": 640.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"a9502c25bf28b7992592\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":384,\"z\":1000,\"width\":656,\"height\":336,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"automobile.model_year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Avg(automobile.mpg)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"automobile\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"model_year\"},\"Name\":\"automobile.model_year\",\"NativeReferenceName\":\"model_year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"mpg\"}},\"Function\":1},\"Name\":\"Avg(automobile.mpg)\",\"NativeReferenceName\":\"Average of mpg\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"model_year\"}}}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 336.00,
+          "width": 656.00,
+          "x": 0.00,
+          "y": 384.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"d65bff341c1309ef0b40\",\"layouts\":[{\"id\":0,\"position\":{\"x\":656,\"y\":384,\"z\":2001,\"width\":624,\"height\":336,\"tabOrder\":2001}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"automobile.model_year\"}],\"Y\":[{\"queryRef\":\"Avg(automobile.acceleration)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"automobile\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"model_year\"},\"Name\":\"automobile.model_year\",\"NativeReferenceName\":\"model_year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"acceleration\"}},\"Function\":1},\"Name\":\"Avg(automobile.acceleration)\",\"NativeReferenceName\":\"Average of acceleration\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"model_year\"}}}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 336.00,
+          "width": 624.00,
+          "x": 656.00,
+          "y": 384.00,
+          "z": 2001.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
