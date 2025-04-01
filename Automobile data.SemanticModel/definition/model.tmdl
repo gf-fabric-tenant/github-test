@@ -10,7 +10,9 @@ annotation PBI_QueryOrder = ["automobile"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.140.829.0 (25.02)+64e0b2e37258cf248e8119ae244f4e8e75927166
+annotation PBIDesktopVersion = 2.141.1177.0 (25.03)+c500dc5720dc9271c2dcfef1230911a0da742ee3
+
+annotation PBI_ProTooling = ["DevMode"]
 
 ref table automobile
 

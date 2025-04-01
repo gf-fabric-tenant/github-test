@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "a9502c25bf28b7992592",
+  "position": {
+    "x": 0,
+    "y": 384,
+    "z": 1000,
+    "height": 336,
+    "width": 656,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "autoSelectVisualType": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "automobile"
+                    }
+                  },
+                  "Property": "model_year"
+                }
+              },
+              "queryRef": "automobile.model_year",
+              "nativeQueryRef": "model_year",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "automobile"
+                        }
+                      },
+                      "Property": "mpg"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(automobile.mpg)",
+              "nativeQueryRef": "Average of mpg"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "automobile"
+                  }
+                },
+                "Property": "model_year"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

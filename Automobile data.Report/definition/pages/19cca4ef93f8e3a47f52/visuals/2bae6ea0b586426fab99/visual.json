@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
+  "name": "2bae6ea0b586426fab99",
+  "position": {
+    "x": 656,
+    "y": 0,
+    "z": 2000,
+    "height": 336,
+    "width": 624,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "autoSelectVisualType": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "automobile"
+                    }
+                  },
+                  "Property": "model_year"
+                }
+              },
+              "queryRef": "automobile.model_year",
+              "nativeQueryRef": "model_year",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "automobile"
+                        }
+                      },
+                      "Property": "weight"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(automobile.weight)",
+              "nativeQueryRef": "Average of weight"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "automobile"
+                  }
+                },
+                "Property": "model_year"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
